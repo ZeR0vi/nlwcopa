@@ -16,4 +16,59 @@ model Boloes {
   title String
   code String @unique
   createdAt DateTime @default(now())
+
+  onwerId String?
+
+  user User? @relation(fields: [onwerId], references: [id])
+
+  participant Participant[]
 }
+
+model User {
+  id String @id @default(cuid())
+
+  name String
+  email String @unique
+  avatar String?
+  createdAt DateTime @default(now())  
+
+  participantAt Participant[]
+  ownBoloes Boloes[]
+}
+
+model Game {
+  id String @id @default(cuid())
+
+  data DateTime
+  firstTeam String
+  secondTeam String
+
+  guesses Guess[]
+}
+
+model Participant {
+  id String @id @default(cuid())
+
+  poolId String
+  userId String
+  user User @relation(fields: [userId], references: [id])
+  boloes Boloes @relation(fields: [poolId], references: [id])
+
+  guesses Guess[]
+
+  @@unique([poolId, userId])
+}
+
+model Guess {
+  id String @id @default(cuid())
+  firstTeamPoints Int
+  secondTeamPoints Int
+  createdAt DateTime @default(now())
+
+  gameId String
+  participantId String
+
+  participant Participant @relation(fields: [participantId], references: [id])
+  game Game @relation(fields: [gameId], references: [id])
+}
+

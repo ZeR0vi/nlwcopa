@@ -1,9 +1,13 @@
 # NLW Copa ⚽ 🇧🇷
 this is a project created by rocketseat in order to develop a complete application in a week.
+![web](https://user-images.githubusercontent.com/99215787/202320515-8ecd4a84-492e-449b-9fd0-08ebb53415d1.png)
 
 ## Introduction 🚀
 
 As said before, the focus is on creating a complete application and learning different technologies and new techniques, here we have the front and backend, we also have the mobile application.
+
+![backend](https://user-images.githubusercontent.com/99215787/202320617-76d6fd22-fbe0-42d1-94a9-642cf5d6ba91.png)
+
 
 ## Objective 🥤
 
@@ -21,4 +25,5 @@ As said before, the focus is on creating a complete application and learning dif
 
 ## Team 💜
 > ZeR0 - Coder
+
 > RocketSeat - Designs, teachs and ideia

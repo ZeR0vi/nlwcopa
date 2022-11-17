@@ -29,7 +29,8 @@ model User {
 
   name String
   email String @unique
-  avatar String?
+  googleId String? @unique
+  avatarUrl String?
   createdAt DateTime @default(now())  
 
   participantAt Participant[]
